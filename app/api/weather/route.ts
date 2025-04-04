@@ -18,6 +18,7 @@ export async function GET(req: Request) {
         const maxtemp = data.days[0].tempmax;
         return NextResponse.json({ description: descript, citty: city , minntemp: mintemp, maxxtemp: maxtemp });
     } catch (error) {
+        console.log(error);
         return NextResponse.json({ description: "Weather data unavailable" , citty: "Unknown City", minntemp: 0, maxxtemp: 0});
     }
 }

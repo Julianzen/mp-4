@@ -18,6 +18,7 @@ export default function WeatherPost() {
             tempmin(data.minntemp);
             tempmax(data.maxxtemp);
         } catch (error) {
+            console.log(error);
             setWeather("Weather data unavailable");
         }
     }
